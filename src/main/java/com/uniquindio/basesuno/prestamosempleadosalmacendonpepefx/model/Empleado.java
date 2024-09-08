@@ -7,11 +7,9 @@ public class Empleado {
     // Atributos
     private String nombre;
     private String idEmpleado;
-    private TipoEmpleado tipoEmpleado;
+    private Puesto puesto;
     private String sucursal;
-    private String municipio;
     private boolean tienePrestamo;
-    private Prestamo prestamo;
     private ArrayList<PagoCuota> cuotasPagadas;
 
     // Constructores
@@ -20,14 +18,12 @@ public class Empleado {
     public Empleado() {
     }
 
-    public Empleado(String nombre, String idEmpleado, TipoEmpleado tipoEmpleado, String sucursal, String municipio, boolean tienePrestamo, Prestamo prestamo, ArrayList<PagoCuota> cuotasPagadas) {
+    public Empleado(String nombre, String idEmpleado, Puesto puesto, String sucursal, boolean tienePrestamo, Prestamo prestamo, ArrayList<PagoCuota> cuotasPagadas) {
         this.nombre = nombre;
         this.idEmpleado = idEmpleado;
-        this.tipoEmpleado = tipoEmpleado;
+        this.puesto = puesto;
         this.sucursal = sucursal;
-        this.municipio = municipio;
         this.tienePrestamo = tienePrestamo;
-        this.prestamo = prestamo;
         this.cuotasPagadas = cuotasPagadas;
     }
 
@@ -48,12 +44,12 @@ public class Empleado {
         this.idEmpleado = idEmpleado;
     }
 
-    public TipoEmpleado getTipoEmpleado() {
-        return tipoEmpleado;
+    public Puesto getTipoEmpleado() {
+        return puesto;
     }
 
-    public void setTipoEmpleado(TipoEmpleado tipoEmpleado) {
-        this.tipoEmpleado = tipoEmpleado;
+    public void setTipoEmpleado(Puesto puesto) {
+        this.puesto = puesto;
     }
 
     public String getSucursal() {
@@ -64,28 +60,12 @@ public class Empleado {
         this.sucursal = sucursal;
     }
 
-    public String getMunicipio() {
-        return municipio;
-    }
-
-    public void setMunicipio(String municipio) {
-        this.municipio = municipio;
-    }
-
     public boolean isTienePrestamo() {
         return tienePrestamo;
     }
 
     public void setTienePrestamo(boolean tienePrestamo) {
         this.tienePrestamo = tienePrestamo;
-    }
-
-    public Prestamo getPrestamo() {
-        return prestamo;
-    }
-
-    public void setPrestamo(Prestamo prestamo) {
-        this.prestamo = prestamo;
     }
 
     public ArrayList<PagoCuota> getCuotasPagadas() {

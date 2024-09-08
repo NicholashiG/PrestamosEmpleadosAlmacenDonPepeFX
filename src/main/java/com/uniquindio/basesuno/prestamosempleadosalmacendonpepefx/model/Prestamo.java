@@ -6,16 +6,18 @@ public class Prestamo {
     private int idPrestamo;
     private Empleado empleado;
     private int valorPrestamo;
+    private String fechaPrestamo;
 
     // Constructores
 
     public Prestamo() {
     }
 
-    public Prestamo(int idPrestamo, Empleado empleado, int valorPrestamo) {
+    public Prestamo(int idPrestamo, Empleado empleado, int valorPrestamo, String fechaPrestamo) {
         this.idPrestamo = idPrestamo;
         this.empleado = empleado;
         this.valorPrestamo = valorPrestamo;
+        this.fechaPrestamo = fechaPrestamo;
     }
 
     // Getters y setters
@@ -42,5 +44,13 @@ public class Prestamo {
 
     public void setValorPrestamo(int valorPrestamo) {
         this.valorPrestamo = valorPrestamo;
+    }
+
+    public String getFechaPrestamo() {
+        return fechaPrestamo;
+    }
+
+    public void setFechaPrestamo(String fechaPrestamo) {
+        this.fechaPrestamo = fechaPrestamo;
     }
 }

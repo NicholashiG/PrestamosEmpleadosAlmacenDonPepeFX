@@ -1,6 +1,6 @@
 package com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.model;
 
-public enum TipoEmpleado{
+public enum Puesto {
     OPERARIO,
     ADMINISTRATIVO,
     EJECUTIVO,

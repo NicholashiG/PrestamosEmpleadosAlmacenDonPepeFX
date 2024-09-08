@@ -9,18 +9,20 @@ public class Solicitud {
     private int monto;
     private int periodo;
     private EstadoSolicitud estadoSolicitud;
+    private double tasaInteres;
 
     // Constructores
     public Solicitud() {
     }
 
-    public Solicitud(int idSolicitud, String fechaSolicitud, Empleado empleadoSolicitante, int monto, int periodo, EstadoSolicitud estadoSolicitud) {
+    public Solicitud(int idSolicitud, String fechaSolicitud, Empleado empleadoSolicitante, int monto, int periodo, EstadoSolicitud estadoSolicitud, int tasaInteres) {
         this.idSolicitud = idSolicitud;
         this.fechaSolicitud = fechaSolicitud;
         this.empleadoSolicitante = empleadoSolicitante;
         this.monto = monto;
         this.periodo = periodo;
         this.estadoSolicitud = estadoSolicitud;
+        this.tasaInteres = tasaInteres;
     }
 
     // Getters y setters
@@ -70,5 +72,13 @@ public class Solicitud {
 
     public void setEstadoSolicitud(EstadoSolicitud estadoSolicitud) {
         this.estadoSolicitud = estadoSolicitud;
+    }
+
+    public double getTasaInteres() {
+        return tasaInteres;
+    }
+
+    public void setTasaInteres(double tasaInteres) {
+        this.tasaInteres = tasaInteres;
     }
 }
