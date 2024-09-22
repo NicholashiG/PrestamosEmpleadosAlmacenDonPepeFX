@@ -4,6 +4,49 @@
 
 Sistema de gestión de préstamos para empleados de Almacén Don Pepe, diseñado para facilitar solicitudes, aprobaciones y pagos de préstamos.
 
+
+------------
+
+
+# Pendiente por Hacer
+
+## Interfaces gráficas:
+- Inicio de Sesión
+- Pantalla Principal
+- Gestión de Solicitudes
+- Gestión de Cuotas
+- Generación de Reportes
+- Gestión de Préstamos
+- Gestión de Usuarios
+
+## Métodos 
+
+#### Solicitudes
+- crearSolicitud
+- editarSolicitud
+- eliminarSolicitud
+
+#### Empleado
+- solicitarPrestamo
+- realizarPago
+
+#### Solicitud
+- calcularCuota
+- actualizarEstado
+
+#### Usuario
+- iniciarSesion
+- cerrarSesion
+
+#### Varios
+- buscarEmpleado
+- generarReporte
+
+## Varios
+- Conexión a la base de datos
+
+------------
+
 ## Tecnologías Usadas
 
 - **Lenguaje de Programación**: Java 17
@@ -14,9 +57,3 @@ Sistema de gestión de préstamos para empleados de Almacén Don Pepe, diseñado
 ## Estado del Proyecto
 
 - **Fase de Desarrollo**: En progreso
-- **Características Implementadas**:
-  - Modelo Generado
-
-## Contribuciones
-
-Grupo de estudiantes de Ingeniería de Sistemas y Computación, Universidad del Quindío.
