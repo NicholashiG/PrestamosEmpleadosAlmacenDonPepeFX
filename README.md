@@ -46,6 +46,7 @@ Sistema de gestión de préstamos para empleados de Almacén Don Pepe, diseñado
 
 ## Varios
 - Conexión a la base de datos
+- Escoger herramienta de reportes e implementarla
 
 ------------
 
