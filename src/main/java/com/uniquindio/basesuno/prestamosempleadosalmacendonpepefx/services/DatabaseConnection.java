@@ -1,8 +1,4 @@
-package com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx;
-
-import org.apache.commons.configuration2.Configuration;
-import org.apache.commons.configuration2.builder.fluent.Configurations;
-import org.apache.commons.configuration2.ex.ConfigurationException;
+package com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.services;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

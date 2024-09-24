@@ -1,16 +1,17 @@
 package com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx;
 
+import com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.services.DatabaseConnection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import java.io.IOException;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class HelloApplication extends Application {
+public class PrestamosDonPepeApp extends Application {
 
 
     public static void main(String[] args) {
@@ -33,7 +34,7 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(PrestamosDonPepeApp.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         primaryStage.setTitle("Hello!");
         primaryStage.setScene(scene);

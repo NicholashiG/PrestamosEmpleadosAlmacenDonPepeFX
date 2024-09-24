@@ -77,7 +77,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx/com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.HelloApplication
+                                com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx/com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.PrestamosDonPepeApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
