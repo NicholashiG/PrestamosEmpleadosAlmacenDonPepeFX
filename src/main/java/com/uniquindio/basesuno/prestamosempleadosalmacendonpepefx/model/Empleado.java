@@ -1,5 +1,6 @@
 package com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.model;
 
+import com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.dbModel.Niveles;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -10,12 +11,14 @@ import java.util.ArrayList;
 @SuperBuilder
 public class Empleado {
 
-    // Atributos
+    private int idEmpleado;
     private String nombre;
-    private String idEmpleado;
+    private String apellido;
+    private Niveles nivelAcceso;
     private Puesto puesto;
-    private String sucursal;
-    private boolean tienePrestamo;
-    private ArrayList<PagoCuota> cuotasPagadas;
-
+    private float salarioMensual;
+    private int idSucursal;
+    private String login;
+    private String clave;
+    private Niveles solicitudes;
 }

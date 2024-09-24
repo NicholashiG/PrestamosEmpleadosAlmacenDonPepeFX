@@ -4,16 +4,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
+import java.time.LocalDateTime;
+
 @NoArgsConstructor
 @Data
 @SuperBuilder
-public class Solicitud {
-
-    private int idSolicitud;
-    private String fechaSolicitud;
+public class Auditoria {
+    private int idAuditoria;
     private int idEmpleado;
-    private int montoSolicitado;
-    private int periodo;
-    private EstadoSolicitud estadoSolicitud;
-    private double tasaInteres;
+    private LocalDateTime fechaYHora;
+    private AccionesAudit accion;
+
 }
