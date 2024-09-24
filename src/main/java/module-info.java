@@ -3,6 +3,7 @@ module com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx {
     requires javafx.fxml;
     requires java.sql;
     requires org.apache.commons.configuration2;
+    requires static lombok;
 
 
     opens com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx to javafx.fxml;
