@@ -10,7 +10,7 @@ Sistema de gestión de préstamos para empleados de Almacén Don Pepe, diseñado
 
 # Pendiente por Hacer
 
-## Actualizar el modelo
+## ~~Actualizar el modelo~~
 
 ## Interfaces gráficas:
 - ~~Inicio de Sesión~~
