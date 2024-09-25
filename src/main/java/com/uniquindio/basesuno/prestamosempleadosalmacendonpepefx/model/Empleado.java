@@ -4,8 +4,6 @@ import com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.dbModel.Nivele
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
-import java.util.ArrayList;
-
 @NoArgsConstructor
 @Data
 @SuperBuilder

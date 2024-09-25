@@ -16,20 +16,7 @@ public class PrestamosDonPepeApp extends Application {
 
     public static void main(String[] args) {
         launch();
-        try (Connection connection = DatabaseConnection.getConnection()) {
-            String query = "SELECT * FROM ejemplo";
-            try (Statement statement = connection.createStatement();
-                 ResultSet resultSet = statement.executeQuery(query)) {
-                while (resultSet.next()) {
-                    System.out.println("Columna1: " + resultSet.getString("id"));
-                    System.out.println("Columna2: " + resultSet.getString("nombre"));
-
-                    // Procesa otros datos según sea necesario
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        consultaPrueba();
     }
 
     @Override
@@ -39,5 +26,20 @@ public class PrestamosDonPepeApp extends Application {
         primaryStage.setTitle("Hello!");
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    public static void consultaPrueba(){
+        try (Connection connection = DatabaseConnection.getConnection()) {
+            String query = "SELECT * FROM ejemplo";
+            try (Statement statement = connection.createStatement();
+                 ResultSet resultSet = statement.executeQuery(query)) {
+                while (resultSet.next()) {
+                    System.out.println("Columna1: " + resultSet.getString("id"));
+                    System.out.println("Columna2: " + resultSet.getString("nombre"));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
