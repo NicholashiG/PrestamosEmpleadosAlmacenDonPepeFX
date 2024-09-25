@@ -16,14 +16,14 @@ public class PrestamosDonPepeApp extends Application {
 
     public static void main(String[] args) {
         launch();
-        consultaPrueba();
+        //consultaPrueba();
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(PrestamosDonPepeApp.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        primaryStage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uniquindio/basesuno/prestamosempleadosalmacendonpepefx/view/inicioSesion.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        primaryStage.setTitle("Inicio de Sesión");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
