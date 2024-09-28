@@ -10,13 +10,11 @@ import lombok.experimental.SuperBuilder;
 public class Empleado {
 
     private int idEmpleado;
+    private int idUsuario;
     private String nombre;
     private String apellido;
-    private Niveles nivelAcceso;
-    private Puesto puesto;
+    private String puesto;
     private float salarioMensual;
     private int idSucursal;
-    private String login;
-    private String clave;
-    private Niveles solicitudes;
+    private String solicitudes;
 }

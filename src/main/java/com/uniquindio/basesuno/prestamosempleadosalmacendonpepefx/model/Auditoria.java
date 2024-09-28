@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 public class Auditoria {
     private int idAuditoria;
     private int idEmpleado;
-    private LocalDateTime fechaYHora;
-    private AccionesAudit accion;
-
+    private LocalDateTime fechaYHoraIngreso;
+    private LocalDateTime fechaYHoraSalida;
 }

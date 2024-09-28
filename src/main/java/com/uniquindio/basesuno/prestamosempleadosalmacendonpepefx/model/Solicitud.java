@@ -14,6 +14,6 @@ public class Solicitud {
     private int idEmpleado;
     private int montoSolicitado;
     private int periodo;
-    private EstadoSolicitud estadoSolicitud;
+    private String estadoSolicitud;
     private double tasaInteres;
 }
