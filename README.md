@@ -12,14 +12,14 @@ Sistema de gestión de préstamos para empleados de Almacén Don Pepe, diseñado
 
 ## ~~Actualizar el modelo~~
 
-## Interfaces gráficas:
+## ~~Interfaces gráficas:~~
 - ~~Inicio de Sesión~~
-- Pantalla Principal
-- Gestión de Solicitudes
-- Gestión de Cuotas
-- Generación de Reportes
-- Gestión de Préstamos
-- Gestión de Usuarios
+- ~~Pantalla Principal~~
+- ~~Gestión de Solicitudes~~
+- ~~Gestión de Cuotas~~
+- ~~Generación de Reportes~~
+- ~~Gestión de Préstamos~~
+- ~~Gestión de Usuarios~~
 
 ## Métodos 
 
