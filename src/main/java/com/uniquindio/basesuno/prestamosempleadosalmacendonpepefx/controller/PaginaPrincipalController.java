@@ -70,7 +70,6 @@ public class PaginaPrincipalController {
         // Abre la nueva ventana
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uniquindio/basesuno/prestamosempleadosalmacendonpepefx/view/"+url));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Gestión de Solicitudes");
         stage.setScene(scene);
         stage.show();
     }
