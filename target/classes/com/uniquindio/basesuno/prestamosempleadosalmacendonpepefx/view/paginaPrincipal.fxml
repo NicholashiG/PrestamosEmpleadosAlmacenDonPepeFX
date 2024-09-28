@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="457.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.controller.PaginaPrincipalController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6190bc" height="58.0" layoutX="-10.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="732.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Página de Préstamos - Don Pepe Empresas" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="573.0" layoutY="12.0" text="Página Principal" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSaludo" layoutX="32.0" layoutY="88.0" text="Bienvenido, nombre ¿Qué quieres hacer?">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="TOP_CENTER" layoutX="51.0" layoutY="146.0" prefHeight="131.0" prefWidth="621.0">
+         <children>
+            <Button fx:id="btnSolicitudes" mnemonicParsing="false" onAction="#gestionarSolicitudes" prefHeight="85.0" prefWidth="210.0" text="Gestión de Solicitudes">
+               <opaqueInsets>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPrestamos" layoutX="216.0" layoutY="30.0" mnemonicParsing="false" onAction="#gestionarPrestamos" prefHeight="85.0" prefWidth="210.0" text="Gestión de Préstamos">
+               <opaqueInsets>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPagos" layoutX="341.0" layoutY="10.0" mnemonicParsing="false" onAction="#gestionarPagos" prefHeight="85.0" prefWidth="210.0" text="Gestión de Pagos">
+               <opaqueInsets>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" layoutX="51.0" layoutY="271.0" prefHeight="131.0" prefWidth="621.0">
+         <children>
+            <Button fx:id="btnUsuarios" layoutX="216.0" layoutY="30.0" mnemonicParsing="false" onAction="#gestionarUsuarios" prefHeight="85.0" prefWidth="210.0" text="Gestión de Usuarios">
+               <opaqueInsets>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReportes" layoutX="341.0" layoutY="10.0" mnemonicParsing="false" onAction="#generarReportes" prefHeight="85.0" prefWidth="210.0" text="Generación de Reportes">
+               <opaqueInsets>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="btnCerrarSesion" layoutX="25.0" layoutY="411.0" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar Sesión" />
+   </children>
+</AnchorPane>

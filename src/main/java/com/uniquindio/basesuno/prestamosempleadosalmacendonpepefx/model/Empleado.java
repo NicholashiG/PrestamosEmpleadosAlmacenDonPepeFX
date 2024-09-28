@@ -1,6 +1,5 @@
 package com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.model;
 
-import com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.dbModel.Niveles;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 

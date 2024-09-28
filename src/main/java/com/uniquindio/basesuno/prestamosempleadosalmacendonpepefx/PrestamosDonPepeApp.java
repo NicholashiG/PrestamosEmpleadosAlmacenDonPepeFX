@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,11 +22,7 @@ public class PrestamosDonPepeApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uniquindio/basesuno/prestamosempleadosalmacendonpepefx/view/inicioSesion.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        primaryStage.setTitle("Inicio de Sesión");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        nuevaVentana(primaryStage, "inicioSesion.fxml");
     }
 
     public static void consultaPrueba(){
@@ -41,5 +38,16 @@ public class PrestamosDonPepeApp extends Application {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private void nuevaVentana(Stage stage, String url) throws IOException {
+        // Cerrar la ventana actual
+        stage.close();
+        // Abre la nueva ventana
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uniquindio/basesuno/prestamosempleadosalmacendonpepefx/view/"+url));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Gestión de Solicitudes");
+        stage.setScene(scene);
+        stage.show();
     }
 }

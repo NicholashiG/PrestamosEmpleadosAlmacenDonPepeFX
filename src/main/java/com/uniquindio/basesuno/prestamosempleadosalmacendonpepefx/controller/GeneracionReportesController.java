@@ -5,35 +5,47 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class InicioSesionController {
+public class GeneracionReportesController {
 
     @FXML
-    private Button btnIniciarSesion;
+    private Button btnAtras;
 
     @FXML
-    private PasswordField txtContrasena;
+    private Button btnDineroMunicipio;
 
     @FXML
-    private TextField txtUsuario;
+    private Button btnDineroSucursal;
 
     @FXML
-    void iniciarSesion(ActionEvent event) throws Exception {
-        System.out.println("Usuario: " + txtUsuario.getText());
-        System.out.println("Contraseña: " + txtContrasena.getText());
+    private Button btnReporteMorosos;
 
+    @FXML
+    void atras(ActionEvent event) throws IOException {
         nuevaVentana("paginaPrincipal.fxml");
+    }
+
+    @FXML
+    void generarReporteDineroPorMunicipio(ActionEvent event) {
+
+    }
+
+    @FXML
+    void generarReporteDineroPorSucursal(ActionEvent event) {
+
+    }
+
+    @FXML
+    void generarReporteMorosos(ActionEvent event) {
 
     }
 
     private void nuevaVentana(String url) throws IOException {
         // Cerrar la ventana actual
-        Stage stage = (Stage) btnIniciarSesion.getScene().getWindow();
+        Stage stage = (Stage) btnAtras.getScene().getWindow();
         stage.close();
         // Abre la nueva ventana
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uniquindio/basesuno/prestamosempleadosalmacendonpepefx/view/"+url));
@@ -42,5 +54,4 @@ public class InicioSesionController {
         stage.setScene(scene);
         stage.show();
     }
-
 }
