@@ -3,21 +3,25 @@ package com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx;
 import com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.services.DatabaseConnection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ResourceBundle;
 
 public class PrestamosDonPepeApp extends Application {
 
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
+        consultaPrueba();
         launch();
-        //consultaPrueba();
+
     }
 
     @Override
@@ -27,7 +31,7 @@ public class PrestamosDonPepeApp extends Application {
 
     public static void consultaPrueba(){
         try (Connection connection = DatabaseConnection.getConnection()) {
-            String query = "SELECT * FROM ejemplo";
+            String query = "SELECT * FROM ejemplos";
             try (Statement statement = connection.createStatement();
                  ResultSet resultSet = statement.executeQuery(query)) {
                 while (resultSet.next()) {
@@ -36,7 +40,7 @@ public class PrestamosDonPepeApp extends Application {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -49,4 +53,6 @@ public class PrestamosDonPepeApp extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
+
 }

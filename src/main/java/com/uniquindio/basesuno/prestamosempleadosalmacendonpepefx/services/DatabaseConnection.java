@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-    private static final String URL = "jdbc:sqlserver://localhost:59485;trustServerCertificate=true;databaseName=PruebaSQL";
+    private static final String URL = "jdbc:sqlserver://localhost:59485;trustServerCertificate=true;databaseName=Prueba";
     private static final String USER = "usuario";
     private static final String PASSWORD = "usuario";
 

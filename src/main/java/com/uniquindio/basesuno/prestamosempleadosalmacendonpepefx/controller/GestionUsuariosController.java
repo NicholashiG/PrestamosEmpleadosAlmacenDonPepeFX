@@ -1,8 +1,12 @@
 package com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.controller;
 
+import com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.model.Usuario;
+import com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.services.UsuariosServicios;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -13,8 +17,41 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.Random;
+import java.util.ResourceBundle;
 
 public class GestionUsuariosController {
+
+    private UsuariosServicios usuariosServicios = new UsuariosServicios();
+
+
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        // Agregar valores al ComboBox
+        choiceNivelAcceso.setItems(FXCollections.observableArrayList("Principal", "Tesoreria", "Empleado"));
+
+        // (Opcional) Seleccionar un valor predeterminado
+        choiceNivelAcceso.getSelectionModel().selectFirst(); // Selecciona el primer elemento por defecto
+    }
+
+    @FXML
+    void nuevo(ActionEvent event) {
+
+        Random random = new Random();
+        int idUsuario = random.nextInt(10000);
+        String nivelAcceso = (String) choiceNivelAcceso.getValue();
+        String login = txtUsuario.getText();
+        String clave = txtContrasenia.getText();
+
+        Usuario nuevoUsuario = new Usuario();
+        nuevoUsuario.setIdUsuario(idUsuario);
+        nuevoUsuario.setNivelAcceso(nivelAcceso);
+        nuevoUsuario.setLogin(login);
+        nuevoUsuario.setClave(clave);
+
+        usuariosServicios.agregarUsuario(nuevoUsuario);
+
+    }
 
     @FXML
     private Button btnAtras;
@@ -35,7 +72,7 @@ public class GestionUsuariosController {
     private Button btnNuevo;
 
     @FXML
-    private ChoiceBox<?> choiceNivelAcceso;
+    private ChoiceBox<String> choiceNivelAcceso;
 
     @FXML
     private Label lblInfoUsuario;
@@ -48,6 +85,8 @@ public class GestionUsuariosController {
 
     @FXML
     private TextField txtUsuario;
+
+
 
     @FXML
     void atras(ActionEvent event) throws IOException {
@@ -74,10 +113,7 @@ public class GestionUsuariosController {
 
     }
 
-    @FXML
-    void nuevo(ActionEvent event) {
 
-    }
 
     @FXML
     void select(MouseEvent event) {
