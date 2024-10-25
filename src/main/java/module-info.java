@@ -4,6 +4,7 @@ module com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx {
     requires java.sql;
     requires org.apache.commons.configuration2;
     requires static lombok;
+    requires java.mail;
 
     exports com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.controller;
     opens com.uniquindio.basesuno.prestamosempleadosalmacendonpepefx.controller to javafx.fxml;
