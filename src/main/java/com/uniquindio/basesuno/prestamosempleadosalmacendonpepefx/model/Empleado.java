@@ -12,8 +12,7 @@ public class Empleado {
     private int idUsuario;
     private String nombre;
     private String apellido;
-    private String puesto;
-    private float salarioMensual;
+    private int idTipoEmpleado;
     private int idSucursal;
-    private String solicitudes;
+
 }
